@@ -7,20 +7,86 @@
 body {
   background-color: lightskyblue;
   font-family: "Lato", sans-serif;
+  text-align: center;
 }
 
 h1 {
   text-align: center;
+  margin-top: 10vh;
+  font-size: 4rem;
+}
+.score {
+  text-align: center;
+  margin: 5rem;
+  font-size: 2rem;
 }
 
 .circles {
-  width: 100px;
-  height: 100px;
+  margin: 1rem;
+  flex: 4;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border: 1 grey;
   border-radius: 50%;
   background-color: whitesmoke;
   margin: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border: 0;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: inherit; /*comes from the body styles*/
+  font-size: inherit;
+  cursor: pointer;
+}
+
+#overlay {
+  /*display: none;*/
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.411);
+  /* opacity: 0.5; */
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.modal {
+  background-color: white;
   padding: 2rem;
+  width: 40%;
+  height: 25%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+#result {
+  font-size: 1.5rem;
 }

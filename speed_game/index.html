@@ -15,15 +15,21 @@
   </head>
   <body>
     <h1>Speedgame</h1>
-    <p>Your score</p>
+    <p class="score">Your score: <span id="score"></span>0</p>
     <section class="circles">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
+      <div class="circle">3</div>
+      <div class="circle">4</div>
     </section>
-    <button>Start game</button>
-    <button>Stop game</button>
+    <button type="button" id="start">Start game</button>
+    <button type="button" id="stop">Stop game</button>
+    <section id="overlay">
+      <div class="modal">
+        <p>Oops, game over!</p>
+        <p id="result">Result text</p>
+        <button type="button" id="close">close</button>
+      </div>
+    </section>
   </body>
 </html>
